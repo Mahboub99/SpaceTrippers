@@ -16,7 +16,7 @@ export default class FlyCameraController {
 
     yaw: number = 0;
     pitch: number = 0;
-
+    
     yawSensitivity: number = 0.001;
     pitchSensitivity: number = 0.001;
     movementSensitivity: number = 0.001;
@@ -39,27 +39,27 @@ export default class FlyCameraController {
             this.input.exitPointerLock();
         }
 
-        if(this.input.isButtonDown(0)){
-            const mouseDelta = this.input.MouseDelta;
-            this.yaw += mouseDelta[0] * this.yawSensitivity;
-            this.pitch += -mouseDelta[1] * this.pitchSensitivity;
-            this.pitch = Math.min(Math.PI/2, Math.max(-Math.PI/2, this.pitch));
-            this.camera.direction = vec3.fromValues(Math.cos(this.yaw)*Math.cos(this.pitch), Math.sin(this.pitch), Math.sin(this.yaw)*Math.cos(this.pitch))
+        // if(this.input.isButtonDown(0)){
+        //     const mouseDelta = this.input.MouseDelta;
+        //     this.yaw += mouseDelta[0] * this.yawSensitivity;
+        //     this.pitch += -mouseDelta[1] * this.pitchSensitivity;
+        //     this.pitch = Math.min(Math.PI/2, Math.max(-Math.PI/2, this.pitch));
+        //     this.camera.direction = vec3.fromValues(Math.cos(this.yaw)*Math.cos(this.pitch), Math.sin(this.pitch), Math.sin(this.yaw)*Math.cos(this.pitch))
             
-            const movement = vec3.create();
-            if(this.input.isKeyDown("w")) movement[2] += 1;
-            if(this.input.isKeyDown("s")) movement[2] -= 1;
-            if(this.input.isKeyDown("d")) movement[0] += 1;
-            if(this.input.isKeyDown("a")) movement[0] -= 1;
-            if(this.input.isKeyDown("q")) movement[1] += 1;
-            if(this.input.isKeyDown("e")) movement[1] -= 1;
-            vec3.normalize(movement, movement);
+        //     const movement = vec3.create();
+        //     if(this.input.isKeyDown("w")) movement[2] += 1;
+        //     if(this.input.isKeyDown("s")) movement[2] -= 1;
+        //     if(this.input.isKeyDown("d")) movement[0] += 1;
+        //     if(this.input.isKeyDown("a")) movement[0] -= 1;
+        //     if(this.input.isKeyDown("q")) movement[1] += 1;
+        //     if(this.input.isKeyDown("e")) movement[1] -= 1;
+        //     vec3.normalize(movement, movement);
             
-            let movementSensitivity = this.input.isKeyDown(Key.Shift)?this.fastMovementSensitivity:this.movementSensitivity;
-            vec3.scaleAndAdd(this.camera.position, this.camera.position, this.camera.direction, movement[2]*movementSensitivity*deltaTime);
-            vec3.scaleAndAdd(this.camera.position, this.camera.position, this.camera.right, movement[0]*movementSensitivity*deltaTime);
-            vec3.scaleAndAdd(this.camera.position, this.camera.position, this.camera.up, movement[1]*movementSensitivity*deltaTime);
-        }
+        //     let movementSensitivity = this.input.isKeyDown(Key.Shift)?this.fastMovementSensitivity:this.movementSensitivity;
+        //     vec3.scaleAndAdd(this.camera.position, this.camera.position, this.camera.direction, movement[2]*movementSensitivity*deltaTime);
+        //     vec3.scaleAndAdd(this.camera.position, this.camera.position, this.camera.right, movement[0]*movementSensitivity*deltaTime);
+        //     vec3.scaleAndAdd(this.camera.position, this.camera.position, this.camera.up, movement[1]*movementSensitivity*deltaTime);
+        // }
 
         if(this.input.isKeyJustDown("t")){
             if(this.camera.type === 'orthographic') this.camera.type = 'perspective';

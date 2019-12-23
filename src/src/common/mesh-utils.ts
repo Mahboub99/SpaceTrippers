@@ -82,6 +82,71 @@ export function SubdividedPlane(gl: WebGL2RenderingContext, resolution: number |
     return mesh
 }
 
+export function WhiteCube(gl: WebGL2RenderingContext): Mesh {
+    let mesh = createEmptyMesh(gl);
+    mesh.setBufferData("positions", new Float32Array([
+        //Upper Face
+        -1,  1, -1,
+        -1,  1,  1,
+         1,  1,  1,
+         1,  1, -1,
+        //Lower Face
+        -1, -1, -1,
+         1, -1, -1,
+         1, -1,  1,
+        -1, -1,  1,
+        //Right Face
+         1, -1, -1,
+         1,  1, -1,
+         1,  1,  1,
+         1, -1,  1,
+        //Left Face
+        -1, -1, -1,
+        -1, -1,  1,
+        -1,  1,  1,
+        -1,  1, -1,
+        //Front Face
+        -1, -1,  1,
+         1, -1,  1,
+         1,  1,  1,
+        -1,  1,  1,
+        //Back Face
+        -1, -1, -1,
+        -1,  1, -1,
+         1,  1, -1,
+         1, -1, -1
+    ]), gl.STATIC_DRAW);
+    mesh.setBufferData("colors", new Uint8Array([
+        //Upper Face
+        ...WHITE, ...WHITE, ...WHITE, ...WHITE,
+        //Lower Face
+        ...WHITE, ...WHITE, ...WHITE, ...WHITE,
+        //Right Face
+        ...WHITE, ...WHITE, ...WHITE, ...WHITE,
+        //Left Face
+        ...WHITE, ...WHITE, ...WHITE, ...WHITE,
+        //Front Face
+        ...WHITE, ...WHITE, ...WHITE, ...WHITE,
+        //Back Face
+        ...WHITE, ...WHITE, ...WHITE, ...WHITE,
+    ]), gl.STATIC_DRAW);
+    mesh.setElementsData(new Uint32Array([
+        //Upper Face
+        0, 1, 2, 2, 3, 0,
+        //Lower Face
+        4, 5, 6, 6, 7, 4,
+        //Right Face
+        8, 9, 10, 10, 11, 8,
+        //Left Face
+        12, 13, 14, 14, 15, 12,
+        //Front Face
+        16, 17, 18, 18, 19, 16,
+        //Back Face
+        20, 21, 22, 22, 23, 20, 
+    ]), gl.STATIC_DRAW);
+    return mesh;
+}
+
 export function Cube(gl: WebGL2RenderingContext): Mesh {
     let mesh = createEmptyMesh(gl);
     mesh.setBufferData("positions", new Float32Array([
