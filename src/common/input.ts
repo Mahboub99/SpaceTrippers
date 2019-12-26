@@ -65,7 +65,8 @@ export default class Input {
         this.currentButtons = [false, false, false];
         this.previousButtons = [false, false, false];
 
-        canvas.addEventListener("mousedown", (ev)=>{
+
+        canvas.addEventListener("click", (ev)=>{
             canvas.focus();
             ev.preventDefault();
             this.currentButtons[ev.button] = true;

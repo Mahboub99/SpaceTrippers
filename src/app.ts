@@ -1,6 +1,6 @@
 // Here, we import the things we need from other script files 
 import Game from './common/game';
-import MotionBlurScene from './scenes/1-Motion-Blur';
+import SpaceTrippersScene from './scenes/SpaceTrippers';
 
 // First thing we need is to get the canvas on which we draw our scenes
 const canvas: HTMLCanvasElement = document.querySelector("#app");
@@ -10,9 +10,9 @@ const game = new Game(canvas, {maxfps: 25});
 
 // Here we list all our scenes and our initial scene
 const scenes = {
-    "Motion Blur": MotionBlurScene,
+    "Game": SpaceTrippersScene,
 };
-const initialScene = "Motion Blur";
+const initialScene = "Game";
 
 // Then we add those scenes to the game object and ask it to start the initial scene
 game.addScenes(scenes);
