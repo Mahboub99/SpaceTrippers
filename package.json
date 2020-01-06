@@ -6,7 +6,8 @@
   "scripts": {
     "watch": "parcel index.html",
     "build": "parcel build index.html --no-source-maps --no-content-hash --public-url ."
-  },
+  },    
+  "start": "node src/app.ts"
   "start": "node app.js",
   "staticFiles": {
     "staticPath": "static",
