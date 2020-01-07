@@ -27,6 +27,7 @@
 - [Demo](#demo)
 - [Install](#Install)
 - [How To Play](#play)
+- [Technology](#tech)
 
 ## 🧐 About <a name = "about"></a>
 A 3D space game. Travelling along the space trying to avoid rocks and obstacles. The ship can avoid the rocks by moving right, or left. Collision with the rocks affects its health by decreasing total health by ONE and every second with no collision with the rock your score increase by ONE.
@@ -57,3 +58,9 @@ The aircraft is running "to infinity and beyond" :runner: so your job is to avoi
 2. Use ```J``` to moving ```left```.
 3. Use ```L``` to move ```right```.
 4. Press ```ESC``` to exit play mode.
+
+## ⛏️ Built Using <a name = "tech"></a>
+- [TypeScript](https://www.typescriptlang.org/) - strict syntactical superset of JavaScript.
+- [glMatrix](http://glmatrix.net/) - Javascript Matrix and Vector library.
+- [WebGL](https://get.webgl.org/) - JavaScript API for rendering interactive 3D graphics.
+- [NodeJs](https://nodejs.org/en/) - Server Environment
