@@ -3,7 +3,7 @@
  <img width=400px height=210px src="https://github.com/aashrafh/SpaceTrippers/blob/Game/demo/SpaceTrippers.png" alt="SpaceTrippers logo"></a>
 </p>
 
-<h3 align="center">Spaec Trippers</h3>
+<h3 align="center">Space Trippers</h3>
 
 <div align="center">
 
