@@ -28,15 +28,18 @@
 ## 🧐 About <a name = "about"></a>
 A 3D space game. Travelling along the space trying to avoid rocks and obstacles. The ship can avoid the rocks by moving right, or left. Collision with the rocks affects its health by decreasing total health by ONE and every second with no collision with the rock your score increase by ONE.
 
-## 🎥 Demo <div name = "demo" align="center" width=1189>
-![GIFDemo](https://github.com/aashrafh/SpaceTrippers/blob/Game/demo/demoGIF.gif)
-![ImageDemo1](https://github.com/aashrafh/SpaceTrippers/blob/Game/demo/demo-img-1.png)
-![ImageDemo4](https://github.com/aashrafh/SpaceTrippers/blob/Game/demo/demo-img-4.png)
-![ImageDemo5](https://github.com/aashrafh/SpaceTrippers/blob/Game/demo/demo-img-5.png)
-![ImageDemo6](https://github.com/aashrafh/SpaceTrippers/blob/Game/demo/demo-img-6.png)
-![ImageDemo2](https://github.com/aashrafh/SpaceTrippers/blob/Game/demo/demo-img-2.png)
-![ImageDemo3](https://github.com/aashrafh/SpaceTrippers/blob/Game/demo/demo-img-3.png)
- </div>
+## 🎥 Demo 
+<div name="demo" align="center" width=1189px>
+  <p align="center">
+  <img src="https://github.com/aashrafh/SpaceTrippers/blob/Game/demo/demoGIF.gif" alt="GIF Demo">
+    <img src="https://github.com/aashrafh/SpaceTrippers/blob/Game/demo/demo-img-1.png" alt="Image Demo">
+    <img src="https://github.com/aashrafh/SpaceTrippers/blob/Game/demo/demo-img-4.png" alt="Image Demo">
+    <img src="https://github.com/aashrafh/SpaceTrippers/blob/Game/demo/demo-img-5.png" alt="Image Demo">
+    <img src="https://github.com/aashrafh/SpaceTrippers/blob/Game/demo/demo-img-6.png" alt="Image Demo">
+    <img src="https://github.com/aashrafh/SpaceTrippers/blob/Game/demo/demo-img-2.png" alt="Image Demo">
+    <img src="https://github.com/aashrafh/SpaceTrippers/blob/Game/demo/demo-img-3.png" alt="Image Demo">
+  </p>
+  </div>
 
 ## 🏁 Install <a name = "Install"></a>
 1. Install [Node.js](https://nodejs.org/en/) and [Visual Studio Code](https://code.visualstudio.com/).
