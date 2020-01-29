@@ -37,7 +37,7 @@
 - [Technology](#tech)
 
 ## 🧐 About <a name = "about"></a>
-A 3D space game. Travelling along the space trying to avoid rocks and obstacles. The ship can avoid the rocks by moving right, or left. Collision with the rocks affects its health by decreasing total health by ONE and every second with no collision with the rock your score increase by ONE.
+A 3D space game. Traveling along the space trying to avoid rocks and obstacles. The ship can avoid the rocks by moving right, or left. Collision with the rocks affects its health by decreasing total health by ONE and every second with no collision with the rock your score increase by ONE.
 
 ## 🎥 Demo 
 <div name="demo" align="center" width=1189px>
